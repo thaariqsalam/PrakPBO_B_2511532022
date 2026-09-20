@@ -1,4 +1,4 @@
-package PrakPBO_B_2511532022;
+package Pekan2_B_2511532022;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -20,6 +20,7 @@ public class Main {
             System.out.println("3. Tarik Tunai");
             System.out.println("4. Cek Informasi Rekening");
             System.out.println("5. Ganti Akun Aktif");
+            System.out.println("6. Cetak Mutasi (Riwayat)");
             System.out.println("0. Keluar");
             System.out.print("Pilih Menu: ");
             
@@ -104,6 +105,14 @@ public class Main {
                         if (!ditemukan) {
                             System.out.println("Error: Nomor rekening tersebut tidak ditemukan!");
                         }
+                    }
+                    break;
+                case 6:
+                    if(akunAktif == null){
+                        System.out.println("Error: Mohon maaf, Anda belum "
+                        		+ "memiliki nomor rekening aktif!");
+                    } else {
+                        akunAktif.cetakMutasi();
                     }
                     break;
                     
