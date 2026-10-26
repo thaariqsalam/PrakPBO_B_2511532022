@@ -22,6 +22,6 @@ public class Transaksi {
 	// METHOD
 	public void cetakDetail() {
 		System.out.println("ID: " + idTransaksi + " | Jenis: " 
-				+ jenis + " | Nominal: Rp" + f(nominal));
+				+ jenis + " | Nominal: Rp" + 	f(nominal));
 	}
 }
