@@ -1,0 +1,27 @@
+package shop.payment;
+
+public class BankTransferPayment implements PaymentMethod {
+    private final String bankName;
+
+    public BankTransferPayment(String bankName) {
+        if (bankName == null || bankName.isBlank()) {
+            throw new IllegalArgumentException("Bank name cannot be null or empty");
+        }
+        this.bankName = bankName;
+    }
+
+    @Override
+    public String getName() {
+        return "Transfer Bank " + bankName;
+    }
+
+    @Override
+    public boolean pay(long amount) {
+        return amount > 0;
+    }
+
+    @Override
+    public long adminFee(long amount) {
+        return shop.StudentInfo.TRANSFER_ADMIN_FEE;
+    }
+}
